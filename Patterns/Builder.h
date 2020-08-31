@@ -1,3 +1,4 @@
+
 #pragma once
 #include<iostream>
 #include<string>
@@ -62,10 +63,15 @@ public:
 
 class Manual  //инструкция
 {
+	int i = 1;
 	string text = "Manual for MUSIC CENTER\n";
 public:
 	void addText(string text)
 	{
+		
+		char buff[10];
+		this->text += _itoa(i++, buff, 10);
+		this->text += ". ";		
 		this->text += text;
 	}
 	string getText()
