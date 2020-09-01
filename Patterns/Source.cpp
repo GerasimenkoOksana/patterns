@@ -4,56 +4,21 @@
 #include"FactoryMethod.h"
 #include"AbstractFactory.h"
 #include"Builder.h"
+#include"Singleton.h"
+#include"Prototype.h"
+#include"Decorator.h"
 
 using namespace std;
 
 int main()
 {
 	setlocale(0, "");
-
-	/*Director* director = new Director();
-	MusicCenterBuilder* builderMC = new MusicCenterBuilder();
-	director->setBuilder(builderMC);
-	director->BuildMaxiMC();
-	MusicCenter* mc = builderMC->getResult();
-	mc->print();
-	director->BuildMiniMC();
-	MusicCenter* mc = builderMC->getResult();
-	mc->print();*/
 	
-	/*MusicCenterBuilder* builderMC = new MusicCenterBuilder();
-	cout << "радио нужно? 1 - да 2- нет" << endl;
-	int a;
-	cin >> a;
-	if (a==1)
-	builderMC->createRadio();
-	cout << "CD нужно? 1 - да 2- нет" << endl;
-	cin >> a;
-	if (a == 1)
-		builderMC->createCD();
-	cout << "BlueRay нужно? 1 - да 2- нет" << endl;
-	cin >> a;
-	if (a == 1)
-		builderMC->createBR();
-	cout << "SubWoofer нужно? 1 - да 2- нет" << endl;
-	cin >> a;
-	if (a == 1)
-		builderMC->createSW();
-	MusicCenter* mc = builderMC->getResult();
-	mc->print();*/
+	Pizza* pizza1 = new ItalianPizza;
+	pizza1 = new Tomato(pizza1);
+	pizza1 = new Cheese(pizza1);
+	cout << pizza1->getName() << endl;
+	cout << "Цена: "<<pizza1->getCoast() << endl;
 
-	Director* director = new Director();
-	MusicCenterBuilder* builderMC = new MusicCenterBuilder();
-	director->setBuilder(builderMC);
-	director->BuildMiniMC();
-
-	MusicCenter* mc = builderMC->getResult();
-	mc->print();
-	ManualBuilder* builderManual = new ManualBuilder;
-	director->setBuilder(builderManual);
-	director->BuildMiniMC();
-
-	Manual* manual = builderManual->getResult();
-	cout << manual->getText() << endl;
 	system("pause");
 }
