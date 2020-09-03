@@ -126,7 +126,9 @@
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="FactoryMethod.h" />
     <ClInclude Include="Prototype.h" />
+    <ClInclude Include="Proxy.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="State.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
