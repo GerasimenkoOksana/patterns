@@ -15,22 +15,15 @@
 #include"ChainOfResponsibility.h"
 #include"Command.h"
 #include"Mediator.h"
+#include"Strategy.h"
+#include"Observer.h"
+#include"Memento.h"
 using namespace std;
 
 int main()
 {
 	setlocale(0, "");
-	ManagerMediator* manager = new ManagerMediator;
-	Collegue* seller = new SellerCollegue(manager);
-	Collegue* programmer = new ProgrammerCollegue(manager);
-	Collegue* tester = new TesterCollegue(manager);
-	manager->seller = seller;
-	manager->programmer = programmer;
-	manager->tester = tester;
-
-	seller->send("Есть заказ, нужно сделать программу ");
-	programmer->send("Программа готова, можно тестить");
-	tester->send("Программа протестирована, можно продавать");
-
+	
+	
 	system("pause");
 }
