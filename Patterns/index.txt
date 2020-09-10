@@ -1,0 +1,4 @@
+Point x =2 y =4
+Circle x =3 y =6 r =5
+Circle x =2 y =5 r =6
+Rectangle P1(2, 4) P2(6, 7)
